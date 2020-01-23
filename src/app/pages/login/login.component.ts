@@ -14,11 +14,11 @@ export class LoginComponent implements OnInit {
 
   profileForm = this.fb.group({
     mail: ['', [Validators.required, Validators.email]],
-    mdp: ['', [Validators.required, Validators.minLength(8)]]
-  })
+    mdp: ['', [Validators.required, Validators.minLength(2)]]
+  });
 
-  public maFonc() {
-    this.toast = false;
+  onSubmit(){
+    console.log('Name: ', this.profileForm.value.mail);
   }
 
   constructor(private fb: FormBuilder) { }

@@ -10,6 +10,7 @@
         <input matInput type="password" placeholder="Password" formControlName="mdp" />
       </mat-form-field>
     </div>
-    <button mat-button class="button" *ngIf="toast" (click)="maFonc()">Gégé</button>
+    <a mat-button class="button" [disabled]="!profileForm.valid" routerLink="/accueil">Login</a>
   </form>
 </mat-card>
+<app-trombi></app-trombi>
