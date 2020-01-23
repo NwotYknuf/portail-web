@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { User } from '../User';
+import { UtilisateursService } from '../utilisateurs.service';
 
 @Component({
   selector: 'app-fiche-user',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fiche-user.component.scss']
 })
 export class FicheUserComponent implements OnInit {
+
+  @Input()
+  public user: User;
 
   constructor() { }
 

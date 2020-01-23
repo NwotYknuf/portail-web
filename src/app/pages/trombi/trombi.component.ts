@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilisateursService } from 'src/app/utilisateurs.service';
+import { User } from 'src/app/User';
 
 @Component({
   selector: 'app-trombi',
@@ -7,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrombiComponent implements OnInit {
 
-  public name = 'Gerard';
-  public surname = 'Depardieu';
-  public imgSrc = 'http://fr.web.img4.acsta.net/pictures/15/07/27/15/04/271855.jpg';
+  public users: User[];
 
-  constructor() { }
+  constructor(private userService: UtilisateursService) {
+
+  }
 
   ngOnInit() {
-
+    this.users = this.userService.getUsers();
   }
 
 }
