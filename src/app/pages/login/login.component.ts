@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,11 +18,12 @@ export class LoginComponent implements OnInit {
     mdp: ['', [Validators.required, Validators.minLength(2)]]
   });
 
-  onSubmit(){
+  onSubmit() {
     console.log('Name: ', this.profileForm.value.mail);
+    this.router.navigate(['/accueil']);
   }
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
 

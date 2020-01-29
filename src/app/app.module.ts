@@ -27,6 +27,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { FicheUserComponent } from './fiche-user/fiche-user.component';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
+import { GEDComponent } from './pages/ged/ged.component';
+import { ActualitesComponent } from './pages/actualites/actualites.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AccueilComponent } from './pages/accueil/accueil.component';
     DashboardComponent,
     FicheUserComponent,
     UtilisateursComponent,
-    AccueilComponent
+    AccueilComponent,
+    GEDComponent,
+    ActualitesComponent
   ],
   imports: [
     BrowserModule,
