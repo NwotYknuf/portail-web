@@ -29,7 +29,9 @@ import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
 import { AccueilComponent } from './pages/accueil/accueil.component';
 import { GEDComponent } from './pages/ged/ged.component';
 import { ActualitesComponent } from './pages/actualites/actualites.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,7 @@ import { ActualitesComponent } from './pages/actualites/actualites.component';
     UtilisateursComponent,
     AccueilComponent,
     GEDComponent,
-    ActualitesComponent
+    ActualitesComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,9 @@ import { ActualitesComponent } from './pages/actualites/actualites.component';
     MatIconModule,
     MatListModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
