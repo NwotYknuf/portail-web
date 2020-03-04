@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "projet-portail"
+  "defaultProject": "projet-portail",
+  "cli": {
+    "analytics": false
+  }
 }

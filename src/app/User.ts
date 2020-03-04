@@ -1,7 +1,10 @@
-export class User {
+export interface User {
 
-  public nom;
-  public prenom;
-  public urlImage;
+  Nom: string;
+  Prenom: string;
+  Adresse: string;
+  Mail: string;
+  DateNaissance: string
+  URL_Image: string
 
 }
