@@ -32,6 +32,7 @@ import { ActualitesComponent } from './pages/actualites/actualites.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +65,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     MatGridListModule,
     MatMenuModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireAuthGuardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
