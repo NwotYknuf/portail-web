@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-menu',
@@ -17,8 +18,14 @@ export class MenuComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private longinService: LoginService) {
 
+  }
+
+  Deco() {
+    if (confirm("Voulez vous vraiment vous déconnecter ?")) {
+      this.longinService.logout();
+    }
   }
 
 }

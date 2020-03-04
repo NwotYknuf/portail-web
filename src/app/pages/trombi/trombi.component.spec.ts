@@ -8,9 +8,9 @@ describe('TrombiComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrombiComponent ]
+      declarations: [TrombiComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
