@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../User';
-import { UtilisateursService } from '../utilisateurs.service';
 
 @Component({
   selector: 'app-fiche-user',

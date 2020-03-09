@@ -1,33 +1,31 @@
 import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-
+import { FormBuilder, Validators } from '@angular/forms';
+import { ActuService } from '../actu.service';
+import { Actu } from '../Actu';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
+
 export class DashboardComponent {
-  /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
-        ];
-      }
 
-      return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
-      ];
-    })
-  );
+  profileForm = this.fb.group({
+    titre: ['', [Validators.required, Validators.minLength(1)]],
+    contenu: ['', [Validators.required, Validators.minLength(1)]]
+  });
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private fb: FormBuilder, private serviceActu: ActuService) {
+
+  }
+
+  onSubmit() {
+
+    let actu: Actu;
+    actu.Titre = this.profileForm.get('titre').value;
+    actu.Contenu = this.profileForm.get('contenu').value;
+
+    this.serviceActu.addActu(actu);
+
+  }
 }

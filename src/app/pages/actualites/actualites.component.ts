@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActuService } from 'src/app/actu.service';
+import { Actu } from 'src/app/Actu';
 @Component({
   selector: 'app-actualites',
   templateUrl: './actualites.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActualitesComponent implements OnInit {
 
-  constructor() { }
+  public actus: Actu[];
+
+  constructor(private actuService: ActuService) { }
 
   ngOnInit() {
+    this.actuService.getActu().subscribe(actus => this.actus = actus);
   }
 
 }

@@ -34,6 +34,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FicheActuComponent } from './fiche-actu/fiche-actu.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AccueilComponent,
     GEDComponent,
     ActualitesComponent,
+    FicheActuComponent,
   ],
   imports: [
     BrowserModule,
