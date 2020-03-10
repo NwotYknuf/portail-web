@@ -1,0 +1,16 @@
+<mat-card>
+  <form [formGroup]="actuForm" (ngSubmit)="onSubmit()">
+    <div>
+      <h1 class="mat-h1">Ajouter une news</h1>
+      <mat-form-field>
+        <input matInput placeholder="Titre" formControlName="titre" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Contenu" formControlName="contenu" />
+      </mat-form-field>
+    </div>
+    <button mat-button class="button" [disabled]="!actuForm.valid">Ajouter</button>
+  </form>
+</mat-card>

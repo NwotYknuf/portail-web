@@ -1,16 +1,1 @@
-<div class="grid-container">
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <div>
-      <h1 class="mat-h1">Dashboard</h1>
-      <mat-form-field>
-        <input matInput placeholder="Titre" formControlName="titre" />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field>
-        <input matInput placeholder="contenu" formControlName="contenu" />
-      </mat-form-field>
-    </div>
-    <button mat-button class="button" [disabled]="!profileForm.valid" routerLink="/actualites">Ajouter News</button>
-  </form>
-</div>
+<h1>Salut c'est le dashboard</h1>

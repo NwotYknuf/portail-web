@@ -35,6 +35,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FicheActuComponent } from './fiche-actu/fiche-actu.component';
+import { AjoutNewsComponent } from './ajout-news/ajout-news.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { FicheActuComponent } from './fiche-actu/fiche-actu.component';
     GEDComponent,
     ActualitesComponent,
     FicheActuComponent,
+    AjoutNewsComponent,
   ],
   imports: [
     BrowserModule,
