@@ -1,1 +1,4 @@
-<h1>Salut c'est le dashboard</h1>
+<h1>Employé du jour :</h1>
+<app-fiche-user *ngIf="(user != null)" [user]="user"></app-fiche-user>
+<h1>Actu du jour :</h1>
+<app-fiche-actu *ngIf="(actu != null)" [actu]="actu"></app-fiche-actu>
