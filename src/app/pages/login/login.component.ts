@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       }
     ).catch(
       (erreur) => {
-        console.log(erreur);
+        alert("Mauvaise combinaison identifiant/mot de passe");
       }
     );
   }
